@@ -1,18 +1,22 @@
-name: CI
+name: first
 
-on: [push]
+on: push
 
 jobs:
-  build:
-
+  job1:
+    name: first job
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Add other action to build
-          echo test, and deploy your project.
-        
+      - name: step 1
+        uses: actions/checkout@v2
+      - name: step 2
+        run: echo "Hello World"
+
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: step 1
+        uses: actions/checkout@v2
+      - name: step 2
+        run:  "Get-ChilItem Env: | Sort-Object Name"
+

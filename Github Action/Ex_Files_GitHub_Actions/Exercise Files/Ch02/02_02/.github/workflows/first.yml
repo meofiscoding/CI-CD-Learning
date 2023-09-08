@@ -8,10 +8,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Step one
+              uses: actions/checkout@v2
             - name: Step two
+              run: echo "Hello World"
     job2:
         name: Second Job
         runs-on: windows-latest
         steps:
             - name: Step one
+              uses: actions/checkout@v2
             - name: Step two
+              run: "Get-ChilItem Env: | Sort-Object Name"
+
+                
