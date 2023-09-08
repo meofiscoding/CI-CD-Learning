@@ -2,3 +2,20 @@ name: first
 
 on: push
 
+jobs:
+  job1:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+        uses: actions/checkout@v2
+      - name: Second step
+        run: echo "Hello world again"
+  job2:
+    name: Second job
+    runs-on: windows-latest
+    steps:
+      - name: First step
+        uses: actions/checkout@v2
+      - name: Second step
+        run: "Get-ChilItem Env: | Sort-Object Name"

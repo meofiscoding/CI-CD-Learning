@@ -2,3 +2,20 @@ name: first
 
 on: push
 
+jobs:
+  job1:
+    name: first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        uses: actions/checkout@v2
+      - name: step 2
+        run: echo "Hello World"
+
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: step 1
+        uses: actions/checkout@v2
+      - name: step 2
+        run: echo "Hello World"
