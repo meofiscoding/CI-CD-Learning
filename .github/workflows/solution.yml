@@ -1,7 +1,7 @@
 name: solution
 
 env: 
-  FILE_NAME: 'custom artifact'
+  FILE_NAME: 'custom-artifact'
 
 on: push
 
