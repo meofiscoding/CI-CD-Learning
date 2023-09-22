@@ -1,5 +1,5 @@
 FROM jenkins/jenkins:lts-jdk11
-MAINTAINER Ernest Mueller <ernestmueller@theagileadmin.com>
+LABEL Ernest Mueller <ernestmueller@theagileadmin.com>
 
 USER root
 
